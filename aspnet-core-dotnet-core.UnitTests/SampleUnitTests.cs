@@ -1,9 +1,13 @@
-using aspnet_core_dotnet_core.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+// <copyright file="SampleUnitTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace aspnet_core_dotnet_core.UnitTests
+namespace Aspnet_core_dotnet_core.UnitTests
 {
+    using Aspnet_core_dotnet_core.Controllers;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class SampleUnitTests
     {

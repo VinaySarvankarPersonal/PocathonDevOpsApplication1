@@ -1,10 +1,14 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
-using System;
+// <copyright file="SampleFunctionalTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace SampleWebApplication.FunctionalTests
 {
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Remote;
+
     [TestClass]
     public class SampleFunctionalTests
     {
@@ -22,14 +26,14 @@ namespace SampleWebApplication.FunctionalTests
         {
             try
             {
-                driver = GetChromeDriver();
+                this.driver = this.GetChromeDriver();
                 var webAppUrl = testContext.Properties["webAppUrl"].ToString();
-                driver.Navigate().GoToUrl(webAppUrl);
-                Assert.AreEqual("Home Page - ASP.NET CORE", driver.Title, "Expected title to be 'Home Page - ASP.NET CORE'");
+                this.driver.Navigate().GoToUrl(webAppUrl);
+                Assert.AreEqual("Home Page - ASP.NET CORE", this.driver.Title, "Expected title to be 'Home Page - ASP.NET CORE'");
             }
             finally
             {
-                driver.Quit();
+                this.driver.Quit();
             }
         }
 
